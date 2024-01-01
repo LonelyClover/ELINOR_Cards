@@ -76,15 +76,15 @@ def create_card():
   template = input_choice('Выберите шаблон:',
                           vertical='Вертикальный',
                           horizontal='Горизонтальный')
-  
+
   match template:
     case 'vertical':
       card, name = create_vertical_card()
-    
+
     case 'horizontal':
       card, name = create_horizontal_card()
       card = card.rotate(90, expand=True)
-  
+
   save_mode = input_choice('Выберите результат:',
                            single='Одиночная карточка',
                            grid='Сетка для печати')
